@@ -18,6 +18,7 @@
   position: relative;
   align-items: center;
   background-color: #f2f2f2;
+  /* z-index: 100; В хэдере с z-index не получилось решить((. Я так понял проблема кроется в позиционировании */
   /* выше установили ограничения для секции */
 }
 
@@ -54,10 +55,15 @@
   z-index: 2;
 }
 
-.header__link{
-  text-decoration-line: none;
+.header__link {
   color: #2f80ed;
+  text-decoration-line: none;
 }
+
+.header__link:hover {
+  border-bottom: 1px solid;
+}
+
 
 .header__main-illustration {
   width: 765px;
@@ -226,6 +232,10 @@
   z-index: 1;
 }
 
+.feyman__link:hover {
+  border-bottom: 1px solid;
+}
+
 .feyman__main-foto {
   width: 867px;
   height: 637px;
@@ -245,18 +255,10 @@
   align-items: center;
   position: relative;
   padding: 90px 0 90px 0;
-}
-
-.section-title_theme_dark {
-  z-index: 1;
-}
-
-.section-subtitle_theme_dark {
   z-index: 1;
 }
 
 .table_theme_dark {
-  z-index: 1;
   row-gap: 80px;
   padding: 80px 0 0 0;
   counter-reset: my-counter;
@@ -286,7 +288,7 @@
   position: absolute;
   right: -210px;
   top: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 .footer {
@@ -351,6 +353,10 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+}
+
+.footer__column-link:hover {
+  border-bottom: 1px solid;
 }
 
 .footer__column_content_social {
