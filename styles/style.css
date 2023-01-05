@@ -279,6 +279,7 @@
 
 .footer__columns {
   display: flex;
+  justify-content: space-between;
   margin: 60px auto 40px auto;
   padding: 0;
   width: 90%;
@@ -286,6 +287,9 @@
 }
 
 .footer__column_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex-basis: 711px;
 
 }
@@ -304,29 +308,36 @@
 }
 
 .footer__column_info {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__column-heading {
+  margin: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
 }
 
 .footer__column-links {
-
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 16px 0;
 }
 
 .footer__column-link {
+  color: #fff;
+  text-decoration-line: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
 }
 
 .footer__column_social {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__social-icon {
-
+  margin-right: 10px;
 }
