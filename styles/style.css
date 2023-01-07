@@ -256,12 +256,6 @@
 .table_theme_dark {
   row-gap: 80px;
   padding: 80px 0 0 0;
-  counter-reset: my-counter;
-}
-
-.table__heading_theme_dark::before {
-  content: counter(my-counter);
-  counter-increment: my-counter;
 }
 
 .table__cell_theme_dark {
