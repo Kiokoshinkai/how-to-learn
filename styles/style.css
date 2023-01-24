@@ -1,3 +1,9 @@
+@keyframes rotation {
+  to {
+    rotate: 360deg;
+  }
+}
+
 .page {
   min-width: 1100px;
   max-width: 1600px;
@@ -14,6 +20,7 @@
   position: relative;
   align-items: center;
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .logo {
@@ -54,12 +61,12 @@
 .header__link {
   color: #2f80ed;
   text-decoration-line: none;
+  transition: opacity 0.5s;
 }
 
 .header__link:hover {
-  border-bottom: 1px solid;
+  opacity: 0.6;
 }
-
 
 .header__main-illustration {
   width: 765px;
@@ -80,6 +87,10 @@
   top: 64px;
   right: 0;
   z-index: 0;
+}
+
+.rotation {
+  animation: rotation 20s infinite;
 }
 
 .description {
@@ -124,12 +135,9 @@
   font-weight: 600;
 }
 
-.digits {
-  margin: 100px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.techniques {
+  margin: 100px auto 0;
+  width: 80%;
 }
 
 .section-title {
@@ -151,39 +159,62 @@
   font-weight: normal;
 }
 
-.table {
+.cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 60px;
-  margin: auto;
-  padding: 60px 0 0 0;
+  column-gap: 100px;
   list-style-type: none;
-  max-width: 1100px;
+  max-width: 920px;
+  padding: 0;
+  margin: auto;
+}
+
+.cards__item {
+  text-align: center;
+  max-width: 240px;
   width: 100%;
 }
 
-.table__cell {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  max-width: 250px;
-  width: 100%;
-  vertical-align: top;
+.cards__image {
+  margin: 60px 40px 43px 40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
 }
 
-.table__heading {
+.cards__title {
   margin: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
 }
 
-.table__text {
-  margin: 0;
-  line-height: 1.2;
+.cards__description {
+  margin: 16px 0 0 0;
+  line-height: 23px;
   font-size: 18px;
   font-weight: normal;
+}
+
+.video {
+  margin-top: 100px;
+}
+
+.video__iframes {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.video__iframe {
+  position: relative;
+  top: 50px;
+  right: 0px;
+}
+
+.oakley {
+  background-color: #f2f2f2;
+  padding-top: 160px;
 }
 
 .feyman {
@@ -225,10 +256,11 @@
   color: #2f80ed;
   text-decoration-line: none;
   z-index: 1;
+  transition: opacity 0.5s;
 }
 
 .feyman__link:hover {
-  border-bottom: 1px solid;
+  opacity: 0.6;
 }
 
 .feyman__main-foto {
@@ -238,6 +270,49 @@
   left: 0;
   bottom: 0;
   z-index: 0;
+}
+
+.digits {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 60px;
+  margin: auto;
+  padding: 60px 0 0 0;
+  list-style-type: none;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.table__cell {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 250px;
+  width: 100%;
+  vertical-align: top;
+}
+
+.table__heading {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table__text {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .kaufman {
@@ -332,10 +407,11 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  transition: opacity 0.5s;
 }
 
 .footer__column-link:hover {
-  color: #2f80ed;
+  opacity: 0.6;
 }
 
 .footer__social-icon {
