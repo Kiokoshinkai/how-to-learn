@@ -1,4 +1,4 @@
-.feyman {
+.feynman {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -6,4 +6,5 @@
   gap: 70px;
   min-height: 890px;
   background-color: #f2f2f2;
+  box-sizing: border-box;
 }
